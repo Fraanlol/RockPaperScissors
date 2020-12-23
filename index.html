@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>RockPaperScissors</title>
     
 </head>
@@ -11,22 +12,76 @@
     
 <header>
     <h1>Security breach</h1>
-    <h4>You've been hacked</h4>
+    <h4 class="status">You've been hacked</h4>
     <div class="insertedText"></div>
+    <div id="pointsCounter">
+        <div class="actualPoints">
+            <div>
+                You
+            </div>
+            <div>
+                Duffy
+            </div>
+        </div>
+        <div class="actualPointsCounter">
+            <div class="counterPlayer">
+                0
+            </div>
+            <div class="counterMachine">
+                0
+            </div>
+        </div>
+    </div>
+    
 </header>
 
 <main>
     <div class="button">
         <button class="instruction">Instructions</button>
+        <div class="elements">
+            <span class="fire">Fire</span> Beats <span class="grass">Grass</span>
+            <span class="grass">Grass</span> Beats <span class="water">Water</span>
+            <span class="water">Water</span> Beats <span class="fire">Fire</span>
+            <span class="last"> The first one to get 5 points, wins.</span>
+        </div>
         <button class="startButton">I'm ready</button>
         
     </div>
-    <div>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+    <div class="playButtons">
+        <div>
+           <button class="fire_attack attack">
+               <span  class="material-icons fireimg ">local_fire_department</span>
+            </button>
+        </div>
+        <div>
+            <button class="water_attack attack">
+                <span class="material-icons md-48 waterimg ">waves</span>
+            </button>
+        </div>
+        <div>
+            <button class="grass_attack attack">
+                <span  class="material-icons grassimg ">grass</span>
+            </button>
+        </div>
+    </div>
+    <div class="scores">
+        <div class="userChoice">
+            
+        </div>
+        <div class="computerChoice">
+            
+        </div>
+        <div class="roundWinner">
+          
+        </div>
+    </div>
+    <div class="restartButton">
+        <button class="restartButtonActivable">
+            Restart
+        </button>
     </div>
 </main>
+
 
 <script src="game.js"></script>
 

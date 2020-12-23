@@ -1,0 +1,75 @@
+*{
+    font-family:'Victor mono';
+}
+body{
+    height:100%;
+    padding:0;
+    background-color:rgb(20, 20, 20);
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 180px 100% auto;
+}
+
+header{
+    color:rgb(43, 228, 43);
+    text-align: center;
+}
+header > h4 {
+    color:red;
+    animation: titlecolor 2s ease infinite running;
+}
+
+@keyframes titlecolor{
+    0%   {color:red}
+    25%  {color:red}
+    50%  {color:rgb(43, 228, 43)}
+    75%  {color: rgb(43, 228, 43)}
+    100% {color:Red}
+}
+
+.insertedText{
+    color: rgb(43, 228, 43);
+}
+
+main{ 
+    justify-self: center;
+    align-self: center;
+}
+
+.instruction{
+    display:block;
+    border-radius: 3px;
+    font-size: 20px;
+    color:red;
+    padding:15px;
+    background-color: rgb(20, 20, 20);
+    border: 1px solid blue;
+    opacity:0;
+    animation: appearButton 2s ease 7s forwards;
+    outline:none;
+}
+.instruction::before, .startButton:before{
+    content: " > ";
+    color:white;
+}
+.startButton{
+    display:block;
+    border-radius: 3px;
+    font-size: 20px;
+    color:red;
+    width:100%;
+    text-align: left;
+    margin-top: 10px;
+    padding:15px;
+    background-color: rgb(20, 20, 20);
+    border: 1px solid blue;
+    opacity:0;
+    animation: appearButton 2s ease 8s forwards;
+    outline:none;
+}
+
+@keyframes appearButton{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+

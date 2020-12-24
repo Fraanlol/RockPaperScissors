@@ -34,8 +34,21 @@ header > h4 {
 main{ 
     justify-self: center;
     align-self: center;
+    width:100%;
 }
 
+.button{
+    display:flex;
+    flex-flow: column;
+}
+.containerButton{
+ justify-self: center;
+ align-self: center;
+ width:200px;
+ border: 1px solid blue;
+ display:none;
+ height:61px;
+}
 .instruction{
     display:block;
     border-radius: 3px;
@@ -43,28 +56,29 @@ main{
     color:red;
     padding:15px;
     background-color: rgb(20, 20, 20);
-    border: 1px solid blue;
-    display:none;
+    border:none;
     opacity:0;
     animation: appearButton 2s ease forwards;
     outline:none;
+    text-align: center;
+ 
 }
-.instruction::before, .startButton:before, .fire::before, .water::before, .grass::before{
+.instruction::before, .startButton:before, .fire1::before, .water1::before, .grass1::before, .fire2::before, .water2::before, .grass2::before{
     content: " > ";
     color:white;
+}
+.containerStart{
+    margin-top: 10px;
 }
 .startButton{
     display:block;
     border-radius: 3px;
     font-size: 20px;
     color:red;
-    width:100%;
-    text-align: left;
-    margin-top: 10px;
+    text-align: center;
+    border:none;
     padding:15px;
     background-color: rgb(20, 20, 20);
-    border: 1px solid blue;
-    display:none;
     opacity:0;
     animation: appearButton 2s ease forwards;
     outline:none;
@@ -75,23 +89,42 @@ main{
     to{opacity:1;}
 }
 
+.fire1{grid-area: fireElm1;}
+.fire2{grid-area: fireElm2;}
+.water1{grid-area: waterElm1; }
+.water2{grid-area: waterElm2 }
+.grass1{grid-area: grassElm1; }
+.grass2{grid-area: grassElm2}
+.beats1{grid-area: beatsTxt1; color:white;}
+.beats2{grid-area: beatsTxt2}
+.beats3{grid-area: beatsTxt3}
+.last{grid-area: last; color:white;}
 .elements{
     color:white;
-    display:none;
     animation: appearButton 2s ease 5.5s  forwards;
     opacity:0;
     margin:auto;
     text-align: center;
+    display:none;
+    grid-template-areas: 
+    'fireElm1 beatsTxt1 grassElm2'
+    'grassElm1 beatsTxt2 waterElm2'
+    'waterElm1 beatsTxt3 fireElm2'
+    'last last last';
+    justify-content:center;
+    align-content: center;
 }
 
 .last{
-    display:inline-block;
-    padding-left: 25px;
     margin-top: 20px;
 }
-.fire, .water, .grass{
-    display:inline-block;
-    width:41.3%;
+
+.beats1, .beats2, .beats3{
+justify-self: center;
+align-self: center;
+}
+.fire1, .water1, .grass1, .fire2, .water2, .grass2{
+    width:auto;
     text-align: center;
     border: 1px solid white;
     padding:8px;
@@ -99,18 +132,19 @@ main{
     text-align: left;
 }
 
-.fire{
+.fire1, .fire2{
     color:red;
 }
-.water{
+.water1, .water2{
     color:lightblue;
 }
-.grass {
+.grass1, .grass2 {
     color: green;
 }
 
 .playButtons{
-    display:none; 
+    display:none;
+    justify-content: center;
     margin-right: 30px;
 }
 .playButtons > div > span {
@@ -139,6 +173,13 @@ main{
     color:lightblue;
     
 }
+
+.attack{
+    background-color: transparent;
+    border:.5px solid white;
+    outline:none;
+}
+
 
 #pointsCounter{
     display:none;
@@ -173,4 +214,5 @@ display:none;
     text-align: left;
     margin-top: 20px;
     padding-left: 30px;
+    text-align: center;
 }

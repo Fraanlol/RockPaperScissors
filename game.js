@@ -93,20 +93,20 @@ function battleStart(playerSelection, computerPlay){
     let roundWin = document.querySelector('.roundWinner');
     if (playerSelection === computerPlay){
                 playerChoice.innerHTML = `You\'ve chosen ${playerSelection} against`
-                computerChoice.innerHTML = `Duffy's ${computerPlay} spell`
+                computerChoice.innerHTML = `Daffy's ${computerPlay} spell`
                 roundWin.innerHTML = `That means a draw, you\'re both good magicians`
             }
             else if (playerSelection === options[0] && computerPlay !== options[1] || playerSelection === options[1] && computerPlay !== options[2] || playerSelection === options[2] && computerPlay !== options[0]){
                 playerChoice.innerHTML = `Your ${playerSelection} spell were SO effective against`
-                computerChoice.innerHTML = `Duffy's ${computerPlay} spell!`
+                computerChoice.innerHTML = `Daffy's ${computerPlay} spell!`
                 roundWin.innerHTML = `You've won 1 point!`
                 playerScore+=1;
                 pointsUser.innerHTML = playerScore;
             }
             else{ 
                 playerChoice.innerHTML = `Bad choice wizard, ${playerSelection} spell missed against`
-                computerChoice.innerHTML = `the powerfull ${computerPlay} of the Mighty Duffy`
-                roundWin.innerHTML = `Duffy wons 1 point!`
+                computerChoice.innerHTML = `the powerfull ${computerPlay} of the Mighty Daffy`
+                roundWin.innerHTML = `Daffy wons 1 point!`
             computerScore+=1;
             pointsMachine.innerHTML = computerScore;
             }
